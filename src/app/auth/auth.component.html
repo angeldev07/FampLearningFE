@@ -1,0 +1,51 @@
+<main class="w-full min-h-screen bg-cover bg-no-repeat auth-container">
+
+  <section class=" max-w-[500px] min-h-screen p-8 bg-white">
+    <!--    header del login -->
+    <header class="mb-10">
+      <div class="flex items-center justify-between">
+        <img src="assets/logo.png" alt="logo de la fundacion amiga">
+        <h1 class="text-4xl tracking-widest">FAMP</h1>
+      </div>
+    </header>
+
+    <section>
+      <div class="mb-6">
+        <h2 class="mb-2 text-center text-2xl font-medium">Iniciar sesión</h2>
+        <p class="text-[14px] text-gray-400 text-center">Ingresa tus datos para iniciar sesión</p>
+      </div>
+    </section>
+
+    <!--  Form section  -->
+    <section>
+      <form [formGroup]="loginForm">
+        <!--  Email input  -->
+        <div class="mb-2">
+          <mat-form-field class="w-full"  appearance="outline">
+            <input matInput placeholder="Correo electronico" formControlName="email">
+          </mat-form-field>
+        </div>
+        <!--  Password input  -->
+        <div class="mb-6">
+          <mat-form-field appearance="outline" class="w-full">
+            <input matInput [type]="hide() ? 'password' : 'text'" placeholder="Contraseña" formControlName="password">
+            <button type="button" mat-icon-button matSuffix (click)="hide.set(!hide())" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
+          <div class="flex justify-end">
+            <a href="#" class="text-gray-400 hover:text-gray-600 transition-colors"> Recuperar contraseña </a>
+          </div>
+        </div>
+
+        <!-- Send button  -->
+        <button mat-raised-button color="primary" class="w-full p-6 btn-color">Iniciar sesión</button>
+      </form>
+
+
+    </section>
+
+  </section>
+
+
+</main>
