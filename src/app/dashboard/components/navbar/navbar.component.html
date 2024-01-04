@@ -1,0 +1,39 @@
+<nav>
+  <mat-toolbar color="primary" class="flex items-center justify-between " >
+    <div class="flex items-center gap-4">
+      <button mat-icon-button
+              (click)="open()"
+              >
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>FampLearning </span>
+    </div>
+
+    <div class="pr-4">
+      <app-avatar label="admin" size="large" image="assets/no-user.webp" [matMenuTriggerFor]="menu"/>
+      <mat-menu #menu="matMenu" class="w-60">
+        <!--   user info     -->
+        <div class="flex items-center gap-3 p-3">
+          <app-avatar label="admin" size="large" image="assets/no-user.webp" />
+          <div class="flex flex-col">
+              <span class="">John Doe</span>
+              <span class="block text-gray-400">admin</span>
+          </div>
+        </div>
+        <mat-divider />
+        <!--  options -->
+        <div class="">
+          <button mat-menu-item>
+            <mat-icon fontIcon="person" color="primary"></mat-icon>
+            Perfil
+          </button>
+        </div>
+        <mat-divider />
+        <button mat-menu-item>
+          <mat-icon fontIcon="logout" color="primary"></mat-icon>
+          Cerrar sesión
+        </button>
+      </mat-menu>
+    </div>
+  </mat-toolbar>
+</nav>

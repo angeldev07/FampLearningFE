@@ -1,0 +1,21 @@
+<div>
+
+  <!--  Logo -->
+  <div class="mb-3 p-4">
+    <img src="assets/logo.png" alt="logo de la fundacion amiga" class="w-full max-w-[150px] m-auto border border-gray-200 rounded-md p-2">
+  </div>
+
+  <!-- options -->
+  <section>
+    <mat-nav-list role="list" >
+      @for (option of sidebarOptions; track option.title){
+        <a mat-list-item [href]="option.link" >
+          <mat-icon matListItemIcon [fontIcon]="option.icon!" ></mat-icon>
+          {{ option.title }}
+        </a>
+      }
+    </mat-nav-list>
+  </section>
+
+</div>
+

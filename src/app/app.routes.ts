@@ -1,4 +1,5 @@
 import {Routes} from '@angular/router';
+import {DashboardComponent} from "./dashboard/dashboard.component";
 
 export const routes: Routes = [
   {
@@ -7,8 +8,14 @@ export const routes: Routes = [
   },
 
   {
+    path: 'admin',
+    component: DashboardComponent,
+    // loadChildren: () => import('./admin/routes/admin.routes').then(a => a.ADMIN_ROUTES)
+  },
+
+  {
     path: '**',
-    redirectTo: '/auth',
+    redirectTo: '/admin',
     pathMatch: 'full'
   }
 ];

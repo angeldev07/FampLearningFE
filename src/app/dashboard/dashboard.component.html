@@ -1,0 +1,12 @@
+
+<mat-sidenav-container class="w-full min-h-screen ">
+
+  <mat-sidenav [opened]="openedSideNav" mode="side" class="w-full max-w-60" >
+    <app-sidebar />
+  </mat-sidenav>
+
+  <mat-sidenav-content class="w-full min-h-screen">
+    <app-navbar [(opened)]="openedSideNav" />
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
