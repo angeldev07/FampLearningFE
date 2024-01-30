@@ -1,14 +1,18 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
 
-import { sidebarOptions } from './const'
+import {sidebarOptions} from './const'
+import {RouterLink, RouterLinkActive} from "@angular/router";
+
 @Component({
   selector: 'app-sidebar',
   standalone: true,
   imports: [
     MatListModule,
-    MatIconModule
+    MatIconModule,
+    RouterLink,
+    RouterLinkActive
   ],
   templateUrl: './sidebar.component.html',
   styles: `
@@ -18,5 +22,9 @@ import { sidebarOptions } from './const'
 export class SidebarComponent {
 
   protected readonly sidebarOptions = sidebarOptions;
+
+  constructor() {
+  }
+
 }
 

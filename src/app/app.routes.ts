@@ -10,12 +10,11 @@ export const routes: Routes = [
   {
     path: 'admin',
     component: DashboardComponent,
-    // loadChildren: () => import('./admin/routes/admin.routes').then(a => a.ADMIN_ROUTES)
+    loadChildren: () => import('./admin/admin.routes').then(a => a.ADMIN_ROUTES)
   },
-
   {
     path: '**',
-    redirectTo: '/admin',
+    redirectTo: 'auth',
     pathMatch: 'full'
   }
 ];

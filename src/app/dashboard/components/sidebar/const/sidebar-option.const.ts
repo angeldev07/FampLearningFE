@@ -5,13 +5,13 @@ export const sidebarOptions: SidebarItem[] = [
   {
     title: 'Cursos',
     icon: 'description',
-    link: ['courses'],
+    link: ['cursos'],
     children: null
   },
   {
     title: 'Usuarios',
     icon: 'group',
-    link: ['/dashboard/users'],
+    link: ['usuarios'],
     children: null
   }
 ]

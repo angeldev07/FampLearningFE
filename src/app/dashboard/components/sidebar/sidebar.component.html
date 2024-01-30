@@ -1,4 +1,4 @@
-<div>
+<div >
 
   <!--  Logo -->
   <div class="mb-3 p-4">
@@ -9,7 +9,7 @@
   <section>
     <mat-nav-list role="list" >
       @for (option of sidebarOptions; track option.title){
-        <a mat-list-item [href]="option.link" >
+        <a mat-list-item [routerLink]="option.link"    >
           <mat-icon matListItemIcon [fontIcon]="option.icon!" ></mat-icon>
           {{ option.title }}
         </a>

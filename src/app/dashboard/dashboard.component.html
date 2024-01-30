@@ -7,6 +7,11 @@
 
   <mat-sidenav-content class="w-full min-h-screen">
     <app-navbar [(opened)]="openedSideNav" />
+
+    <div class="p-4">
+      <router-outlet></router-outlet>
+    </div>
+
   </mat-sidenav-content>
 
 </mat-sidenav-container>
